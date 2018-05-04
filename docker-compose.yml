@@ -1,0 +1,30 @@
+version: "2"
+
+services:  
+  nodejs:
+    image: dlohani/node:react-native
+    ports:
+      - "3002:3002"
+    environment:
+      - DISPLAY=$DISPLAY
+      - ANDROID_HOME=$ANDROID_HOME
+      - JAVA_HOME=/java
+      - PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.1
+      - TERM=dumb
+    devices:
+      - /dev/snd:/dev/snd
+    volumes:
+      - ./:/RNStyling
+      - /home/dlohani/Android:/home/dlohani/Android
+      - /usr/lib/jvm/java-8-openjdk-amd64:/java
+      - /etc/java-8-openjdk:/etc/java-8-openjdk
+      - /etc/ssl:/etc/ssl
+      - /home/dlohani/.gradle:/root/.gradle
+      - /dev/bus/usb:/dev/bus/usb
+      - /etc/udev/rules.d:/etc/udev/rules.d
+      - /media/dlohani/personal/initiations/Android-keystore:/media/dlohani/personal/initiations/Android-keystore
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    working_dir: /RNStyling
+    entrypoint: react-native start
+    restart: always
+    network_mode: host
