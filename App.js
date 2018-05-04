@@ -123,4 +123,98 @@ export default class App extends Component {
   }
 }
 
-const styles = {};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#dddddd',
+  },
+  header: {
+    alignSelf: 'flex-start',
+    width: '100%'
+  },
+  toolbar: {
+    backgroundColor: '#ff045c',
+    padding: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  buttonGroup: {
+    flexDirection: 'row',
+    padding: 10,
+    justifyContent: 'center'
+  },
+  buttonOutline: {
+    marginTop: 20,
+    backgroundColor: '#fff',
+    padding: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#ff045c'
+  },
+  buttonOutlineText: {
+    color: '#ff045c',
+    fontSize: 16,
+    textAlign: 'center'
+  },
+  button: {
+    marginTop: 20,
+    backgroundColor: '#ff045c',
+    padding: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    textAlign: 'center'
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: '500',
+    textAlign: 'center',
+    alignSelf: 'center',
+    margin: 10,
+    color: '#fff'
+  },
+  product: {
+    margin: 20,
+    marginBottom: 10,
+    marginTop: 10,
+    backgroundColor: "#fff"
+  },
+  productDescription: {
+    alignItems: 'center',
+    padding: 20
+  },
+  productTitle: {
+    fontSize: 18,
+    fontWeight: '400',
+    marginBottom: 10
+  },
+  productPrice: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333'
+  },
+  productImage: {
+    width: '100%',
+    height: 300,
+  },
+  divider: {
+    height: 2,
+    width: '50%',
+    backgroundColor: '#ccc',
+    alignSelf: 'center',
+    margin: 20
+  },
+  featureText: {
+    fontSize: 18,
+    fontWeight: '400'
+  },
+  bold: {
+    fontWeight: '700'
+  }
+});
